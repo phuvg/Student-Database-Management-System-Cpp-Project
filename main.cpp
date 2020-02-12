@@ -1,6 +1,7 @@
-#include "student.h"
+﻿#include "student.h"
 #include <iostream>
 #include <stdlib.h>
+#include <windows.h>
 using namespace std;
 
 void importNumOfStu(Student listStudent[], int& numOfList)
@@ -73,10 +74,12 @@ void modifyRecord(Student listStudent[], int& numOfList)
 	else {
 		cout << "Modify Information Student ";
 		int informationEdit;
-		cout << "1. Edit name" << endl;
-		cout << "2. Edit code" << endl;
-		cout << "3. Edit address" << endl;
-		cout << "4. Birdth day" << endl;
+		cout << "_________________________" << endl;
+		cout << "|U-♫1. Edit name" << endl;
+		cout << "|2. Edit code" << endl;
+		cout << "|3. Edit address" << endl;
+		cout << "|4. Birdth day" << endl;
+		cout << "__________________________" << endl;
 		cin >> informationEdit;
 		
 		//edit
@@ -145,6 +148,9 @@ int main()
 	int numOfList=0; //save num of list student
 	while (true)
 	{
+		HANDLE hConsoleColor;
+		hConsoleColor = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(hConsoleColor, 12);
 		int choose;
 		cout << "Student Database Management System" << endl;
 		cout << "1. Add     Records" << "\n2. List    Records" << "\n3. Modify  Records" << "\n4. Delete  Records" << "\n5. Exit    Records" << endl;
