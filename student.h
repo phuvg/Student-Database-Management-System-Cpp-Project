@@ -6,7 +6,7 @@ class Student
 private:
 	string Name , Address;
 	int Code;
-	Birthday Birthday;
+	Birthday Day;
 public:
 	void Import();
 	void Export();
@@ -16,5 +16,6 @@ public:
 	void setName(string nameStu);
 	void setAddr(string addrStu);
 	void setCode(int codeStu);
+	void setBirthday(Birthday dayStu);
 };
 

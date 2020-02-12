@@ -3,20 +3,22 @@
 void Student::Import()
 {
 	fflush(stdin);
+	cout << "\nInput Student Code: ";
+	cin >> Code;
 	cout << "\nStudent Name: ";
+	cin.ignore();
 	getline(cin, Name);
 	cout << "\nAddress: ";
 	getline(cin, Address);
-	cout << "\nBirthday: ";
-	Birthday.Import();
-	cout << "\nInput Student Code: ";
+	Day.Import();
+
 }
 void Student::Export()
 {
 	cout << "\nStudent Code: " << Code;
 	cout << "\nStudent Name: " << Name;
 	cout << "\nBirthday: ";
-	Birthday.Export();
+	Day.Export();
 	cout << "\nAddress: " << Address;
 }
 int Student::getCode()
@@ -42,4 +44,8 @@ void Student::setName(string nameStu)
 void Student::setAddr(string addrStu)
 {
 	Address = addrStu;
+}
+void Student::setBirthday(Birthday dayStu)
+{
+	Day = dayStu;
 }
